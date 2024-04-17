@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "489717598671",
+    "project_id": "push-notification-maui-demo",
+    "storage_bucket": "push-notification-maui-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489717598671:android:0cf1bc535f3412c9e6eaba",
+        "android_client_info": {
+          "package_name": "com.companyname.pushnotificationdemomaui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKGmWLjeb-NK486cPPVdPsjDh1jUvLpQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

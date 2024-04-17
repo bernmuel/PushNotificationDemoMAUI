@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PushNotificationDemoMAUI.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="125" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Aspect="AspectFit"
+                HeightRequest="185"
+                SemanticProperties.Description="dot net bot in a race car number eight"
+                Source="dotnet_bot.png" />
+
+            <Label
+                x:Name="MainLabel"
+                Grid.Row="1"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="Push Notification Demo"
+                TextColor="{DynamicResource PrimaryTextColor}" />
+
+
+            <Button
+                x:Name="CounterButton"
+                Grid.Row="3"
+                Padding="20,0"
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                Clicked="OnCounterClicked"
+                Text="Send Notification to FCM"
+                TextColor="{DynamicResource ButtonTextColor}" />
+
+            <Label
+                x:Name="InfoLabel"
+                Grid.Row="4"
+                Padding="20"
+                FontAttributes="None"
+                FontSize="15"
+                HorizontalTextAlignment="Center"
+                Text="When FCM receives your request to send a push notification, it will deliver the notification to this device."
+                TextColor="{DynamicResource PrimaryTextColor}" />
+
+            <Label
+                x:Name="HintLabel"
+                Grid.Row="5"
+                Padding="20"
+                FontAttributes="None"
+                FontSize="15"
+                HorizontalTextAlignment="Center"
+                Text="Swipe down to see recent notifications received by your device."
+                TextColor="{DynamicResource PrimaryTextColor}" />
+        </Grid>
+
+        <Grid
+            Grid.Row="6"
+            HorizontalOptions="Center"
+            VerticalOptions="End">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="0"
+                Text="Enable token comparison test"
+                VerticalOptions="Center" />
+            <Switch
+                x:Name="TokenTestSwitch"
+                Grid.Column="1"
+                Toggled="OnTokenTestSwitchToggled"
+                VerticalOptions="Center" />
+        </Grid>
+    </Grid>
+</ContentPage>
